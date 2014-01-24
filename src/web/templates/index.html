@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+    <title>BTCX Data</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layouts/side-menu.css') }}">
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#top">BTCX Data</a>
+
+            <ul>
+                <li><a href="#database">Database</a></li>
+                <li><a href="#price_info">BTC Prices</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1 id='top'>BTCX Data</h1>
+            <h2>Data Collection Experiement</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead" id="database">Database</h2>
+            <table class="pure-table">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Created</th>
+                        <th>Modified</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td id="db_size">?</td>
+                        <td id="db_created">?</td>
+                        <td id="db_modified">?</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="content-subhead" id="price_info">Bitcoin Price</h2>
+            <div id="charts" class="pure-g-r">
+              <div id="all_chart" class="pure-u-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//www.google.com/jsapi"></script>
+<script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>
